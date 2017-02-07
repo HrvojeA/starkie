@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>Menu Item</li>
+        <li>Menu Item</li>
+        <li>Menu Item</li>
+    </ul>
+</nav>
+<section id="section_1" class="section section1">
+    <div class="container">
+        <div class="col-xs-12 the_big_monstrous">
+            <h1 id="tbm_heading">BRING</br>TOMORROW</br>TODAY!</h1>
+            <img id="big_dancing_logo"src="img/that_big_thing.png"/>
+        </div>
+
+    </div>
+
+
+</section>
+<section id="section_2" class="section section2">
+    <div class="container">
+        <div class="col-xs-12 mini_logo_heading">
+            <p id="mini_heading"><strong>way to be</strong> made</p>
+            <img src="img/mini_logo.png"/>
+        </div>
+        <div class="col-xs-12 content_body">
+            <h1 id="s1_h1">ONE GOAL - BRING TOMORROW<br>TO OUR CUSTOMERS TODAY</h1>
+            <p id="s1_p">STARK Solutions operater on leading edge of metal technology. Significant investments, from some of the most respected players in industry, enabled company determination to provide uncompromising solutions. After over one year of intensive research and development, STARK Solutions is ready to present our first product, a betting terminal T-1000 without restrictions or compromise.
+            </p>
+            <div class="col-xs-2 learn_more">
+                <p>LEARN MORE</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section_3" class="section section3">
+    <div class="row">
+        <div class="panel_45_deg">
+
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="js/scrollify.min.js"></script>
+<script src="js/waypoint.js"></script>
+<script src="js/inView.waypoint.js"></script>
+
+<script type="text/javascript">
+    var counterfucker = 0;
+    var section_1_back_counter = 0;
+
+
+    $(window).scroll(function(event){
+
+
+
+
+        var inview = new Waypoint.Inview({
+            element: $('#section_2 >.container')[0],
+            entered: function(direction) {
+                console.log('Enter triggered with direction ' + direction);
+               // inview.enable();
+
+                $('body').addClass('transition_section_2').fadeIn(1000);
+                $('body').removeClass('transition_section_1').fadeIn(1000);
+
+                //  inview.disable();
+
+            },
+            exited: function(direction){
+                console.log('Exited triggered with direction ' + direction);
+               // inview.enable();
+
+                $('body').addClass('transition_section_1').fadeIn(1000);
+                $('body').removeClass('transition_section_2').fadeIn(1000);
+
+                // inview.disable();
+            }
+        });
+
+        var inview_2= new Waypoint.Inview({
+            element: $('#section_3 >.row')[0],
+            entered: function(direction) {
+                console.log('Enter triggered with direction ' + direction);
+                // inview.enable();
+
+
+
+                //  inview.disable();
+
+            },
+            exited: function(direction){
+                console.log('Exited triggered with direction ' + direction);
+                // inview.enable();
+
+
+
+                // inview.disable();
+            }
+        });
+
+
+        var yOffset = window.pageYOffset;
+        var breakpoint = 50;
+        if (yOffset > breakpoint){
+            $("nav ul").addClass('active');
+        }else{
+            $("nav ul").removeClass('active');
+        }
+
+    });
+
+
+    function section2_transform(){
+
+    }
+    $(function() {
+        $.scrollify({
+            section : ".section"
+        });
+    });
+
+</script>
+</body>
+</html>
