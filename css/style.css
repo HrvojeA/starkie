@@ -99,7 +99,9 @@ html{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;}
+    background-size: cover;
+    overflow-x: hidden;
+}
 body{
     font-family:"DINPro";
     font-weight:bold;
@@ -194,25 +196,42 @@ p{
     top: 229px;
     left: -338px;
 }
-.rotate_in{
-    background:red;
-    top: 50%;
-    width: 0;
-    height: 100px;
-    -webkit-transition: .55s cubic-bezier(.62,.02,.34,1);
-    -moz-transition: .55s cubic-bezier(.62,.02,.34,1);
-    transition: .55s cubic-bezier(35.62,.02,.34,1);
-    left: 50%;
+.subpanel_1{
     position: absolute;
-    pointer-events: none;
+    width:200vw;
+    height:200vw;
+    background: rgba(50,159,246,0.1);
+    left:-1200px;
+    transform:rotate(25deg);
+
 }
-.panel_45_deg{
-    background:red;
-    width:300vw;
-    position:absolute;
-    height:300vw;
-    margin-left: -150vw;
-    -webkit-transition: -webkit-transform .9s cubic-bezier(.52,.01,.16,1),background .26s linear;
-    -moz-transition: -moz-transform .9s cubic-bezier(.52,.01,.16,1),background .26s linear;
-    transition: transform .9s cubic-bezier(.52,.01,.16,1),background .26s linear;
+.section3 p{
+
+    padding-top:20px;
+    font-weight:300;
+    font-size:18px;
+    line-height:31px;
+}
+.inview{
+    transform:rotate(0deg);
+    background: rgb(235, 238, 242);
+    margin-top: -50px;
+    transition:transform 500ms cubic-bezier(.17,.67,.83,.67), background 500ms cubic-bezier(.17,.67,.83,.67);
+
+}
+#BVRLogo {
+    display: block;
+    width:256px;
+    height:256px;
+    margin: 0 auto 32px auto;
+}
+.subpanel_1-content_blueline{
+    height:15px;
+    width:35px;
+    margin:15px;
+    border-top:3px solid #33b7ff;
+
+}
+.section3 .container{
+    padding-top:60px;
 }
