@@ -193,7 +193,7 @@ p{
 }
 #big_dancing_logo{
     position: absolute;
-    top: 229px;
+    top: -329px ;
     left: -338px;
 }
 .subpanel_1{
@@ -216,7 +216,7 @@ p{
     transform:rotate(0deg);
     background: rgb(235, 238, 242);
     margin-top: -50px;
-    transition:transform 500ms cubic-bezier(.17,.67,.83,.67), background 500ms cubic-bezier(.17,.67,.83,.67);
+    transition:transform 400ms cubic-bezier(.17,.67,.83,.67), background 100ms cubic-bezier(.17,.67,.83,.67);
 
 }
 #BVRLogo {
