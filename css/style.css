@@ -205,33 +205,77 @@ p{
     transform:rotate(25deg);
 
 }
-.section3 p{
+.section3 p,
+.section4 p{
 
     padding-top:20px;
     font-weight:300;
     font-size:18px;
     line-height:31px;
 }
-.inview{
-    transform:rotate(0deg);
-    background: rgb(235, 238, 242);
-    margin-top: -50px;
-    transition:transform 400ms cubic-bezier(.17,.67,.83,.67), background 100ms cubic-bezier(.17,.67,.83,.67);
 
-}
 #BVRLogo {
     display: block;
     width:256px;
     height:256px;
     margin: 0 auto 32px auto;
 }
-.subpanel_1-content_blueline{
+.content_blueline{
     height:15px;
     width:35px;
     margin:15px;
     border-top:3px solid #33b7ff;
 
 }
-.section3 .container{
+.subpanel_2{
+    position: absolute;
+    width:200vw;
+    height:200vw;
+    background: rgb(235, 238, 242);
+    right:-1200px;
+    transform:rotate(-25deg);
+
+}
+.section3 .container,
+.section4 .container{
     padding-top:60px;
+}
+
+
+.inview_1{
+    transform:rotate(0deg);
+    background: rgb(235, 238, 242);
+    margin-top: -50px;
+    transition:transform 400ms cubic-bezier(.17,.67,.83,.67), background 100ms cubic-bezier(.17,.67,.83,.67);
+
+}
+
+.inview_2{
+    transform:rotate(0deg);
+    background: linear-gradient(229deg,rgb(235, 238, 242) , rgb(161, 163, 166));
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 33s ease infinite;
+    -moz-animation: AnimationName 33s ease infinite;
+    animation: AnimationName 33s ease infinite;
+     margin-top: -50px;
+    transition:transform 400ms cubic-bezier(.17,.67,.83,.67), background 100ms cubic-bezier(.17,.67,.83,.67);
+
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:92% 0%}
+    50%{background-position:9% 100%}
+    100%{background-position:92% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:92% 0%}
+    50%{background-position:9% 100%}
+    100%{background-position:92% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:92% 0%}
+    50%{background-position:9% 100%}
+    100%{background-position:92% 0%}
 }
